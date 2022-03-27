@@ -1,5 +1,9 @@
 ## Address for the project
-cd "c:\My Files\Coursera\coursera-fullstack"
+https://typerhack.github.io/javascript-course/
+
+
 ## How to run browser sync
 browser-sync start --server --files "*"
 browser-sync start --server --directory --files "**/*"
+
+
