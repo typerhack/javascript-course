@@ -1,0 +1,9 @@
+h1 {
+    color: rgb(255, 187, 0);
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.city-name {
+    font-size: 2em;
+}
