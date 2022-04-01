@@ -5,5 +5,11 @@ https://typerhack.github.io/javascript-course/
 ## How to run browser sync
 browser-sync start --server --files "*"
 browser-sync start --server --directory --files "**/*"
+--------------------------------------------------------------
 
+## Initilaizing node js server
+npm init
+npm install --save express
+npm install --save multer
+npm install -g nodemon
 

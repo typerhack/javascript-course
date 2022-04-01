@@ -1,0 +1,97 @@
+header {
+    min-height: 350px;
+    background-color: blue;
+    color: white;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+
+header>* {
+    z-index: 1;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    background-image: url('../img/profile.png');
+    background-size: cover;
+}
+
+footer {
+    height: 100px;
+}
+
+.post {
+    height: 250px;
+    border: solid 2px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.post:hover {
+    transform: translate3d(0, -15px, 0);
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.post-image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 0px 0 8px;
+}
+
+.post-date {
+    font-size: 12px;
+    color: rgb(148, 148, 148);
+}
+
+.post-text {
+    overflow: hidden;
+    line-height: 1.4;
+    max-height: 90px;
+}
+
+.nav-button.new-post-button {
+    font-weight: bold;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #004186;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.nav-button.new-post-button:hover {
+    background-color: #002349;
+    cursor: pointer;
+    transform: scale3d(1.2, 1.2, 1);
+    box-shadow: 0 .4rem 2rem 0 rgba(0, 0, 0, .1);
+}
+
+#individual-post-date {
+    font-size: 15px;
+    border-top: solid 1px rgb(196, 196, 196);
+    border-bottom: solid 1px rgb(196, 196, 196);
+    ;
+}
