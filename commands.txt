@@ -13,3 +13,5 @@ npm install --save express
 npm install --save multer
 npm install -g nodemon
 
+## Run the server
+nodemon app.js      

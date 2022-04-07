@@ -12,12 +12,12 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/new-post.js" defer></script>
 
     <title>Javascript Course</title>
 </head>
 
-<body class="home-page">
+<body class="new-post-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">My Blog App</a>
@@ -32,34 +32,37 @@
             </div>
         </div>
     </nav>
-    <div class="add-post">
-        <a href="new-post.html" class="text-white text-decoration-none">
-            <div class="nav-button new-post-button">+</div>
-        </a>
-    </div>
+
     <header class="d-flex flex-column justify-content-center">
-        <div class="mx-auto shadow profile-image"></div>
-        <div class="mx-auto profile-name"><a href="www.hybevo.com" class="h1 text-decoration-none text-white">Hybevo Corp</a></div>
-        <div class="mx-auto subtext">Welcome to my blog</div>
+        <div class="mx-auto profile-name"><a class="h1 text-decoration-none text-white">New Post</a></div>
+        <div class="mx-auto subtext">Add a new Blog post</div>
     </header>
+    <div class="container">
+        <div class="mt-4 navigation">
+            <a class="btn btn-outline-primary" href="./index.html">Back</a>
+        </div>
+    </div>
     <div class="container mt-4 mb-4 main">
         <div class="row justify-content-center">
-            <div class="col-8 blog-post">
-                <div class="row post mt-4">
-                    <div class="col-4 post-image"></div>
-                    <div class="col-8 py-3 px-4 post-content">
-                        <div class="mb-2 post-date">1400/01/11</div>
-                        <div class="post-title">
-                            <h4 class="h2 text-black fw-bold">Dummy Title</h4>
-                        </div>
-                        <div class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat, voluptas deserunt recusandae veniam iure nesciunt, aspernatur doloremque voluptatem dolore natus ratione fuga, maiores esse? Hic repellendus eligendi aliquam
-                            rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur voluptatum est laborum quos saepe! Facere, eius tempore voluptatem veniam nemo asperiores facilis culpa odio distinctio. Perferendis incidunt explicabo omnis
-                            maiores.
-                        </div>
+            <div class="col-6 new-post justify-content-center">
+                <form id="new-post-form">
+                    <div class="form-group">
+                        <label for="title-input" class="h6">Title:</label>
+                        <input type="text" class="form-control mb-3" id="title-input" placeholder="New post title">
                     </div>
-                </div>
+                    <div class="form-group mb-3">
+                        <label for="blogcontent" class="h6">Blog Content:</label>
+                        <textarea class="form-control" id="blogcontent" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="file-upload" class="h6">Select Image:</label>
+                        <input type="file" class="form-control-file mb-3" id="file-upload">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="submitBtn" onsubmit="this.preventDefault()" onclick="submitNewPost();">Submit</button>
+                </form>
             </div>
         </div>
+    </div>
     </div>
 
     <footer class="d-flex flex-column justify-content-center bg-light">

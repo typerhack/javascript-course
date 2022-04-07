@@ -3,6 +3,8 @@ const API_BASE_URL = "http://localhost:3000/"
 
 window.onload = () => {
     getPosts();
+    getPostIdParam();
+    getIndivedualPost();
 }
 
 const getPosts = () => {
@@ -21,18 +23,22 @@ const buildPosts = (blogPosts) => {
 
         const image = `${API_BASE_URL}${blogPost.post_image}`;
 
+        const postLink = `/post.html?id=${blogPost.id}`;
+
         blogPostsContent += `
-        <div class="row post mt-4">
-                    <div class="col-4 post-image" style="background-image: url(${image})"></div>
-                    <div class="col-8 py-3 px-4 post-content">
-                        <div class="mb-2 post-date">${postDate}</div>
-                        <div class="post-title">
-                            <h4 class="h2 text-black fw-bold">${blogPost.title}</h4>
-                        </div>
-                        <div class="post-text">${blogPost.content}
+        <a href="${postLink}" class="text-decoration-none">
+            <div class="row post mt-4">
+                        <div class="col-4 post-image" style="background-image: url(${image})"></div>
+                        <div class="col-8 py-3 px-4 post-content">
+                            <div class="mb-2 post-date">${postDate}</div>
+                            <div class="post-title">
+                                <h4 class="h2 text-black fw-bold">${blogPost.title}</h4>
+                            </div>
+                            <div class="text-black post-text">${blogPost.content}
+                            </div>
                         </div>
                     </div>
-                </div>`
+                    </a>`
     }
     console.log(blogPostsContent);
     document.querySelector(".blog-post").innerHTML = blogPostsContent;

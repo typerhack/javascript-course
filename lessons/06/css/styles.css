@@ -1,11 +1,14 @@
 header {
     min-height: 350px;
-    background-color: blue;
     color: white;
-    background-image: url('../img/banner.jpg');
     background-size: cover;
     background-position: top;
     position: relative;
+}
+
+.home-page header,
+.new-post-page header {
+    background-image: url('../img/banner.jpg');
 }
 
 header::after {
